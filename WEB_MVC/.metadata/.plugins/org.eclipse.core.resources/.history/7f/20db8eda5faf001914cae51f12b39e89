@@ -1,0 +1,6 @@
+<%@ page import ="java.time.LocalDate" %>
+
+<header>
+ 	
+ 	<h1 style="border-bottom: 1px solid black">My first Spring web MVC application</h1>
+</header>

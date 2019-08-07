@@ -1,0 +1,32 @@
+package com.cts.jpa.hib.demo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class ManagerEmp extends Employee {
+	
+	@Column(name = "hra")
+	private double hra;
+	
+	public ManagerEmp()
+	{
+		
+	}
+	
+	public ManagerEmp(int empid, String empname, double basic, double hra) {
+		super(empid, empname, basic);
+		this.hra = hra;
+	}
+
+	public double getHra() {
+		return hra;
+	}
+
+	public void setHra(double hra) {
+		this.hra = hra;
+	}
+	
+	
+
+}

@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>Jio Customer App</title>
+	</head>
+	<script >
+	function choose(event){
+
+		console.log(event.target.value)
+	}
+	</script>

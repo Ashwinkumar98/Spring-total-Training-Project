@@ -1,0 +1,16 @@
+package com.example.demo.TeleController;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.model.Customer;
+
+@Controller
+public class TelecomController {
+	
+	public ModelAndView showCustomer()
+	{
+		return new ModelAndView("formData","cus",new Customer());
+	}
+
+}

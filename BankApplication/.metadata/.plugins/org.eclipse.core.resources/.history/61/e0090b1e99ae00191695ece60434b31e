@@ -1,0 +1,65 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Bank_Details")
+public class BankAccount {
+	
+	@Id
+	@Column(name="Account_Number")
+	private int account;
+	
+	@Column(name="Bank_Name")
+	private String bankName;
+	
+	@Column(name="Customer_Name")
+	private String cusName;
+	
+	public BankAccount() {}
+	
+	
+
+	public BankAccount(int account, String bankName, String cusName) {
+		super();
+		this.account = account;
+		this.bankName = bankName;
+		this.cusName = cusName;
+	}
+
+
+
+	public int getAccount() {
+		return account;
+	}
+
+	public void setAccount(int account) {
+		this.account = account;
+	}
+
+	public String getBankName() {
+		return bankName;
+	}
+
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+
+	public String getCusName() {
+		return cusName;
+	}
+
+	public void setCusName(String cusName) {
+		this.cusName = cusName;
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [account=" + account + ", bankName=" + bankName + ", cusName=" + cusName + "]";
+	}
+	
+	
+}

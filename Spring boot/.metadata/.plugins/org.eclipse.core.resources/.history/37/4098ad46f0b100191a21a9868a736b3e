@@ -1,0 +1,112 @@
+<%-- <%@ taglib uri = "http://java.sun.com/jstl/core_rt" prefix="c"%>
+<jsp:include page="/header"/>
+<script >
+
+		function choose()
+		{
+			if(event.target.value === 'pre')
+			{
+				var x = document.getElementById("offers");
+				x.style.visibility = "visible"
+				document.getElementById("title").innerHTML="Pre-Paid-Offers";
+				
+			}
+			else
+		    {
+				 document.getElementById("title").innerHTML="Post-Paid-Offers";
+				 var x = document.getElementById("offers");
+				 x.style.visibility = "visible";
+			}
+		}
+
+</script>
+<div>
+	<h3>Choose Your plan</h3>
+	
+	<div>
+	 <label id="pre">Pre-Paid</label>
+	 <input type="radio" name="plan" value="pre" onclick="choose()" id="pre">
+	 
+	 
+	 </input>
+	</div>
+	
+	<div>
+	 <label id="post">Post-Paid</label>
+	 <input type="radio"  name="plan" value="post" onclick="choose()" id="post"/>
+	</div>
+	
+	<div id="offers" style="visibility: hidden">
+	<h1 id="title"></h1>
+	<% if(false) { %>
+  <DIV>....</DIV>
+<% }
+	 else
+	 {
+		 %>
+		  <DIV>gkldfvg</DIV>
+		<% 
+	 }
+	 %>
+	
+	</div>
+	
+</div>
+
+<jsp:include page="/footer"/> --%>
+
+
+
+
+
+
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<HTML>
+    <HEAD>
+        <TITLE>Reading Radio Buttons</TITLE>
+    </HEAD>
+
+    <BODY>
+        <H1>Reading Radio Buttons</H1>
+        <%
+            boolean radio2checked = false;
+            if(request.getParameter("radios") != null) {
+                if(request.getParameter("radios").equals("radio1")) {
+                    out.println("Radio button 1 was selected.<BR>");
+                }
+                else {
+                    out.println("Radio button 1 was not selected.<BR>");
+                }
+                if(request.getParameter("radios").equals("radio2")) {
+                    out.println("Radio button 2 was selected.<BR>");
+                    radio2checked = true;
+                }
+                else {
+                    out.println("Radio button 2 was not selected.<BR>");
+                }
+            }
+            pageContext.setAttribute("showUSAdropdown", radio2checked);
+            String checked = radio2checked ? "checked=\"checked\"" : "";
+        %>
+        <FORM name="radioform">
+             <INPUT TYPE="radio" onclick="document.radioform.submit()" NAME="radios"     VALUE="radio1" CHECKED>
+             Radio Button 1
+            <BR>
+            <INPUT TYPE="radio" <%=checked%> onclick="document.radioform.submit()" NAME="radios" VALUE="radio2">
+             Radio Button 2
+            <BR>
+            States:
+            <SELECT name="states">
+             <c:choose>
+                <c:when test="${showUSAdropdown}">
+                    <option>Alabama</option>
+                    <option>Washington</option>
+                </c:when>
+                <c:otherwise>
+                    <option>Germany</option>
+                </c:otherwise>
+            </c:choose>
+            </SELECT>
+        </FORM>
+    </BODY>
+</HTML>

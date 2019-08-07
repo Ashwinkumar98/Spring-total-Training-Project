@@ -1,0 +1,7 @@
+package com.cts.crud;
+
+import org.junit.runner.RunWith;
+
+public class EmployeeServiceImpTestContextConfig {
+
+}

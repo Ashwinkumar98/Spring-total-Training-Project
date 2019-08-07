@@ -1,0 +1,87 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Loan")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Loan {
+	
+	@Id
+	@Column(name="ID")
+	private int id;
+	
+	@Column(name="Loan_amount")
+	private double loanamount;
+	
+	@Column(name="Loan_Duration")
+	private int duration;
+	
+	@Column(name="Intrest")
+	private String intrest;
+	
+	@ManyToOne
+	@JoinColumn(name="cuid")
+	private BankAccount bank;
+	
+	public Loan() {
+		
+	}
+	
+
+	public Loan(int id, double loanamount, int duration, String intrest) {
+		super();
+		this.id = id;
+		this.loanamount = loanamount;
+		this.duration = duration;
+		this.intrest = intrest;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getLoanamount() {
+		return loanamount;
+	}
+
+	public void setLoanamount(double loanamount) {
+		this.loanamount = loanamount;
+	}
+
+	public int getDuration() {
+		return duration;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
+	public String getIntrest() {
+		return intrest;
+	}
+
+	public void setIntrest(String intrest) {
+		this.intrest = intrest;
+	}
+
+	@Override
+	public String toString() {
+		return "Loan [id=" + id + ", loanamount=" + loanamount + ", duration=" + duration + ", intrest=" + intrest
+				+ "]";
+	}
+	
+	
+}

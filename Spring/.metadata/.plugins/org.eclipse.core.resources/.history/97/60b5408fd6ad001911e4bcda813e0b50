@@ -1,0 +1,30 @@
+package com.cts.jpa.hib.demo.UI;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import com.cts.jpa.hib.demo.model.Employee;
+import com.cts.jpa.hib.demo.util.JPAUtil;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		
+		Scanner in =new Scanner(System.in);
+		
+		Employee e = new Employee(4,"Aswath",8765);
+		
+		EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.persist(e);
+		em.getTransaction().commit();
+		
+		System.out.println("Emp Saved !!");
+		
+		JPAUtil.shutdown();
+		in.close();
+	}
+
+}

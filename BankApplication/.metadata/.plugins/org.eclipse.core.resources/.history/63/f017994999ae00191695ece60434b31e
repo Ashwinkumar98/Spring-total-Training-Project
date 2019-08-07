@@ -1,0 +1,25 @@
+package com.bank.bankApplication;
+
+import javax.persistence.EntityManager;
+
+import com.bank.bankApplication.Util.JPAUtil;
+import com.bank.bankApplication.model.BankAccount;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	
+    	BankAccount acc=new BankAccount("1234557676670", "ICIC", "Ashwin");
+    	
+    	EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		
+		em.getTransaction().commit();
+		
+		System.out.println("Emp Saved !!");
+		
+		JPAUtil.shutdown();
+    }
+}

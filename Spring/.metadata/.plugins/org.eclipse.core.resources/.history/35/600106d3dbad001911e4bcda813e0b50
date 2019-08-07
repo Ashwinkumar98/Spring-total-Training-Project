@@ -1,0 +1,36 @@
+package com.cts.jpa.hib.demo.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class ContractorEmp extends Employee {
+	
+	@Column(name = "cdur")
+	private int contractorDur;
+	
+	public ContractorEmp()
+	{
+		
+	}
+	
+	
+
+	public ContractorEmp(int contractorDur) {
+		super();
+		this.contractorDur = contractorDur;
+	}
+
+
+
+	public int getContractorDur() {
+		return contractorDur;
+	}
+
+	public void setContractorDur(int contractorDur) {
+		this.contractorDur = contractorDur;
+	}
+	
+	
+
+}

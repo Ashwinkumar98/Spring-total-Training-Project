@@ -1,0 +1,21 @@
+package com.cts.scd.service;
+
+public class GreetNoteServiceAdvance {
+	
+	private GreetNoteProvider gnp;
+	
+	GreetNoteServiceAdvance()
+	{
+		
+	}
+	
+	GreetNoteServiceAdvance(GreetNoteProvider obj)
+	{
+		gnp=obj;
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package com.cts.dummy.Service;
+
+public class Addtion implements ArtithmeticService {
+
+	public int add(int x, int y) {
+		return x*y;
+	}
+	
+
+}

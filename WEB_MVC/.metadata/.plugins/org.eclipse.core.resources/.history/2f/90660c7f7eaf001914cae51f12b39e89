@@ -1,0 +1,5 @@
+package com.cts.SpringWebMVC.EmployeeService;
+
+public interface EmployeeService {
+
+}

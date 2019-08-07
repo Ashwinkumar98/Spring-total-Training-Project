@@ -1,0 +1,32 @@
+package com.cts.jpa.hib.demo.UI;
+
+import java.sql.Date;
+
+import javax.persistence.EntityManager;
+
+import com.cts.jpa.hib.demo.model.Employee;
+import com.cts.jpa.hib.demo.model.ManagerEmp;
+import com.cts.jpa.hib.demo.model.Student;
+import com.cts.jpa.hib.demo.model.StudentIdentity;
+import com.cts.jpa.hib.demo.util.JPAUtil;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		
+		Employee emp =new Employee(1,"Ashwin",2397);
+		ManagerEmp mag= new ManagerEmp(2,"naveen",9332,8473);
+		
+		EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.persist(emp);
+		em.getTransaction().commit();
+		
+		System.out.println("Emp Saved !!");
+		
+		JPAUtil.shutdown();
+
+	}
+
+}

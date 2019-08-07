@@ -1,0 +1,94 @@
+package com.cts.jpa.hib.demo.model.ManyToMany;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="artist")
+public class Artist implements Comparable<Artist>{
+	
+	@Id
+	private int id;
+	
+	
+	@Column(name ="ArtistName")
+	private String name;
+	
+	@ManyToMany(cascade = {CascadeType.ALL})
+	@JoinTable(name ="MovieArtist",
+	joinColumns = { @JoinColumn(name ="mid")},
+	inverseJoinColumns  = { @JoinColumn(name="id")} 
+	)
+	private Set<Movies> movies;
+	
+	public Artist() {}
+	
+	public Artist(int id, String name, Set<Movies> movies) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.movies = movies;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public Set<Movies> getMovies() {
+		return movies;
+	}
+
+
+
+	public void setMovies(Set<Movies> movies) {
+		this.movies = movies;
+	}
+
+
+
+	public int compareTo(Artist o) {
+		// TODO Auto-generated method stub
+		return this.id-o.id;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Artist [id=" + id + ", name=" + name + ", movies=" + movies + "]";
+	}
+
+	
+	
+
+}

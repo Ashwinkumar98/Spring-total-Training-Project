@@ -1,0 +1,87 @@
+package com.cts.jpa.hib.demo.model.oneTomany;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="trainee")
+public class Trainee implements Comparable<Trainee> {
+	
+	@Id
+	private int id;
+	
+	@Column(name="Traineename")
+	private String name;
+	
+	@ManyToOne
+	@JoinColumn(name="cuid")
+	private Course course;
+	
+	Trainee(){}
+	
+	
+
+	public Trainee(int id, String name, Course course) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.course = course;
+	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public Course getCourse() {
+		return course;
+	}
+
+
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	
+
+	@Override
+	public String toString() {
+		return "Trainee [id=" + id + ", name=" + name + ", course=" + course + "]";
+	}
+
+
+
+	public int compareTo(Trainee o) {
+		return (this.id<o.id ? -1 : (this.id > o.id ? 1: 0 ));
+	}
+	
+	
+	
+}

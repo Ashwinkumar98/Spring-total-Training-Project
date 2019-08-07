@@ -1,0 +1,11 @@
+package com.cts.SpringWebMVC.greetService;
+
+public class GreetServiceImp implements GreetService {
+
+	@Override
+	public String getGreeting() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

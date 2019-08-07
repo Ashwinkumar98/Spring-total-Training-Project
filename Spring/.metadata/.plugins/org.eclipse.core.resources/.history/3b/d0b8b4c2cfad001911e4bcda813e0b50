@@ -1,0 +1,5 @@
+package com.cts.jpa.hib.demo.model;
+
+public class Employee {
+
+}

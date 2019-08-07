@@ -1,0 +1,11 @@
+ <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+ 
+ <jsp:include page="/header"/>
+
+	<c:if test="${msg ne null}">
+	
+	<p class="alert alert-info p-2"><strong>${msg }</strong></p>
+	
+	</c:if>	
+ 
+ <jsp:include page="/footer"/>

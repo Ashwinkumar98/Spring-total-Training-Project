@@ -1,0 +1,42 @@
+package com.cts.crud.controller;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cts.crud.Service.CustomerService;
+import com.cts.crud.Service.PostpaidService;
+import com.cts.crud.Service.PrepaidService;
+import com.cts.crud.model.Customer;
+import com.cts.crud.model.Postpaid;
+import com.cts.crud.model.PrepaidOffers;
+
+@Controller
+
+public class TelecomController {
+	
+	@GetMapping({"","/","/home"})
+	public ModelAndView CustomerForm()
+	{
+		return new ModelAndView("customerForm");
+	}
+	
+	@GetMapping("/header")
+	public ModelAndView headerPage()
+	{
+		return new ModelAndView("header");
+	}
+	
+	@GetMapping("/footer")
+	public ModelAndView footerPage()
+	{
+		return new ModelAndView("footer");
+	}
+	
+
+}

@@ -1,0 +1,32 @@
+package com.cts.currency.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service("b1")
+public class CurrencyConverterImp implements CurrencyConverter {
+	
+	@Value("#{'${country}'.split(',')}")
+	private List<String> country;
+	
+	@Value("#{'${country}'.split(',')}")
+	private List<String> currency;
+
+	public Integer ConverteCurrency(double currency, String name) {
+		
+		for(int i=0;i<country.size();i++)
+		{
+			if(country.get(i).equals(name))
+			{
+				
+			}
+		}
+		
+		return 0;
+	}
+	
+	
+
+}

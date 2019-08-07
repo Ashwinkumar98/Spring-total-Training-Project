@@ -1,0 +1,5 @@
+package com.bank.bankApplication.Util;
+
+public class JPAUtil {
+
+}

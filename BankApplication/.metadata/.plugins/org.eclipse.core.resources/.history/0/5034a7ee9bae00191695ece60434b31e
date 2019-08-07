@@ -1,0 +1,16 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class HomeLoan {
+	
+	@Column(name="Builder_name")
+	private String name;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Address address;
+}

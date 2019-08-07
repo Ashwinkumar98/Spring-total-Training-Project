@@ -1,0 +1,25 @@
+package com.cts.crud.Service;
+
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.cts.crud.model.Postpaid;
+
+@Service
+public class PostpaidServiceImp implements PostpaidService
+{
+	@Autowired
+	private PostpaidService dao;
+	
+	@Override
+	public Postpaid save(Postpaid data) {
+		return dao.save(data);
+	}
+
+	@Override
+	public List<Postpaid> findAll() {
+		return dao.findAll();
+	}
+	
+}

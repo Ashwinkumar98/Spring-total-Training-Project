@@ -1,0 +1,11 @@
+package com.cts.SpringWebMVC.Controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class DefaultController {
+	
+	public String defaultGetRequestHandler() {
+		return "home";
+	}
+}

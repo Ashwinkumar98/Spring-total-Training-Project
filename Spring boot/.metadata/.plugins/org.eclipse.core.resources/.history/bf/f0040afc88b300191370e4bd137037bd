@@ -1,0 +1,15 @@
+ <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+ 
+ <jsp:include page="/header"/>
+
+	<c:if test="${msg ne null}">
+	<p class="alert alert-info p-2"><strong>${msg }</strong></p>
+	</c:if>
+	
+	<div class="container row">
+		<div class="col-sm-12 center-block">
+			<h2 class="jumbotron">Employee Management System: Why and How to Start Using One</h2>
+		</div>
+	</div>
+ 
+ <jsp:include page="/footer"/>

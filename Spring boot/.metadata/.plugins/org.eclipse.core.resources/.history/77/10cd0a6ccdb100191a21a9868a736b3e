@@ -1,0 +1,23 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+ <jsp:include page="/header"/>
+ 	
+ 	<div>
+ 		<h3>Customer Information</h3>
+ 		
+ 		<form:form method="POST" modelAttribute="cus">
+ 		
+ 		<div>
+ 			<form:label path="id">Customer Id:</form:label>
+ 			<form:input path="id" type = "number" disabled="true"/>
+ 		</div>
+ 		
+ 		<div>
+ 			<form:label path="Fname">Customer Id:</form:label>
+ 			<form:input path="Fname" type = "text"/>
+ 		</div>
+ 		
+ 		
+ 		
+ 		</form:form>
+ 	</div>

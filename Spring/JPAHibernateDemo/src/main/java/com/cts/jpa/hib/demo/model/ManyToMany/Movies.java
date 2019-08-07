@@ -1,0 +1,88 @@
+package com.cts.jpa.hib.demo.model.ManyToMany;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="movies")
+public class Movies implements Comparable<Movies> {
+	
+	@Id
+	private int mid;
+	
+	@Column(name="moviename")
+	private String name;
+	
+	@ManyToMany(mappedBy = "movies")
+	private Set<Artist> artist;
+	
+	public Movies() {}
+	
+	
+
+	public Movies(int mid, String name, Set<Artist> artist) {
+		super();
+		this.mid = mid;
+		this.name = name;
+		this.artist = artist;
+	}
+
+
+
+	public int getMid() {
+		return mid;
+	}
+
+
+
+	public void setMid(int mid) {
+		this.mid = mid;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public Set<Artist> getArtist() {
+		return artist;
+	}
+
+
+
+	public void setArtist(Set<Artist> artist) {
+		this.artist = artist;
+	}
+
+
+
+	public int compareTo(Movies o) {
+		// TODO Auto-generated method stub
+		return this.mid-o.mid;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Movies [mid=" + mid + ", name=" + name + ", artist=" + artist + "]";
+	}
+	
+	
+	
+
+}

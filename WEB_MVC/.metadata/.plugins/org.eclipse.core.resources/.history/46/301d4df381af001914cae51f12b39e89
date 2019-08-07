@@ -1,0 +1,13 @@
+<%@ taglib uri = "http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+ 
+ <jsp:include page="/header"/>
+ 
+ 	<section class="form-style">
+		<h2>Employee Details</h2>
+		
+		
+	 	
+ 	</section>
+ 	
+ <jsp:include page="/footer"/>

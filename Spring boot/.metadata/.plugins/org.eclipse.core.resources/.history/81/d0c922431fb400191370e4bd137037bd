@@ -1,0 +1,9 @@
+package com.cts.crud.DAO;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cts.crud.model.Postpaid;
+
+public interface PostPaid extends  JpaRepository<Postpaid, Long>  {
+
+}

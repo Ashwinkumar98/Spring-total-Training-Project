@@ -1,0 +1,14 @@
+package com.cts.crud.Service;
+
+import java.util.List;
+
+import com.cts.crud.model.OfferPackage;
+import com.cts.crud.model.Postpaid;
+import com.cts.crud.model.PrepaidOffers;
+
+public interface OfferService{
+	
+	List<PrepaidOffers> findAllPrepaid();
+	List<Postpaid> findAllPostpaid();
+	OfferPackage save(OfferPackage off);
+}

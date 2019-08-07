@@ -1,0 +1,12 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<html>
+	<head>
+		<title>Telecom System</title>
+		
+	</head>
+	<body>
+		<nav class="navbar nav-light bg-light navbar-expand-sm">
+		
+		<a href="#" class="navbar-brand">Jio Customer Service</a>
+		
+		</nav>

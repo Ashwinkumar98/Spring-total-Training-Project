@@ -1,0 +1,15 @@
+package com.cts.SpringWebMVC.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class WelcomeController {
+	
+	@RequestMapping("/greet")
+	public String showGreetPage(@RequestParam(name="uname" ,required = false) String username)
+	{
+		return "greet";
+	}
+}

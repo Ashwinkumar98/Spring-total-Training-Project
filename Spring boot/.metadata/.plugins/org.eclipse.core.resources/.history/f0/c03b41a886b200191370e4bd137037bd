@@ -1,0 +1,43 @@
+package com.cts.crud;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class DefaultController {
+	
+	@GetMapping({"","/","/home"})
+	public ModelAndView homepagerequest()
+	{
+		return new ModelAndView("dashboard");
+	}
+	
+	@RequestMapping("/header")
+	public ModelAndView headersectionRequest()
+	{
+		Map<String, String> navLinks = new LinkedHashMap<>();
+		navLinks.put("home", "Home");
+		navLinks.put("emps", "Employees");
+		navLinks.put("newEmp", "New Employee");
+		navLinks.put("SearchEmp", "Search Employee");
+		
+		ModelAndView mv = new ModelAndView("header");
+		mv.addObject("links", navLinks);
+		mv.addObject("apptitle","Employee Record Manager");
+		
+		return new ModelAndView("header");
+	}
+	
+	@RequestMapping("/footer")
+	public ModelAndView footersectionRequest()
+	{
+		return new ModelAndView("footer");
+	}
+	
+	
+}

@@ -1,0 +1,35 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+<jsp:include page="/header"/>
+<script>
+	function searchfun(event)
+	{
+		document.getElementById("inp").placeholder = event.target.value;
+	}
+</script>
+<div class="container p-4">
+	<form method="GET" action="findData">
+		<table class="table table-bordered table-striped">
+		<tr>
+			<td><strong>Search Employee Data</strong></td>
+			<td>
+				<select  name="search" class="form-control" onchange="searchfun(event)">
+					<option value="">----SELECT-----</option>
+					<option value="Id">Search By Id</option>
+					<option value="EmailId">Search By Email Id</option>
+					<option value="Mobileno">Search By mobile number</option>
+					<option value="Department"> Search By department</option>
+					<option value="JoiningDate">Search By joining date</option>
+				</select>
+				</td>
+				<td>
+					<input  type="text" id="inp" name="inputval" class="form-control" />
+				</td>
+				<td>
+					<button  class="btn btn-success">Search</button>
+				</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<jsp:include page="/footer"/>

@@ -1,0 +1,13 @@
+package com.cts.ashwin;
+
+import com.cts.scd.service.GreetService;
+import com.cts.scd.service.GreetServiceImp;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        GreetService gs = new GreetServiceImp();
+        gs.greet("Ashwin");
+    }
+}

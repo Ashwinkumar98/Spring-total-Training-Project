@@ -1,0 +1,62 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+ 
+<jsp:include page="/header"/>
+
+<div class="container-fluid p-4">
+	<h3>Employee Information</h3>
+	<div class="col-sm-6">
+		<form:form method="POST" modelAttribute="emp">
+		
+		<form:hidden path="empId"   />
+		
+		<div class="from-group">
+			<form:label path="firstname">Firstname</form:label>
+			<form:input path="firstname" type="text" class="form-control" />
+			<form:errors path="firstname" class="text-danger"></form:errors>
+		</div>
+		
+		<div class="from-group">
+			<form:label path="lastname">Lastname</form:label>
+			<form:input path="lastname" type="text" class="form-control" />
+			<form:errors path="lastname" class="text-danger"></form:errors>
+		</div>
+		
+		<div class="from-group">
+			<form:label path="basic">Basic Pay</form:label>
+			<form:input path="basic"  type="double" class="form-control" />
+		</div>
+		
+		<div class="from-group">
+			<form:label path="dept">Department</form:label>
+			<form:select path="dept" class="form-control">
+	 		<form:option value="">----SELECT-----</form:option>
+	 		<form:options items="${depts}"/>
+	 		</form:select>
+		</div>
+		
+		<div class="from-group">
+			<form:label path="emailid">Email Id</form:label>
+			<form:input path="emailid"  type="email" class="form-control" />
+		</div>
+		
+		<div class="from-group">
+			<form:label path="mobileno">Mobile Number</form:label>
+			<form:input path="mobileno"  type="text" class="form-control" />
+		</div>
+		
+		<div class="from-group">
+			<form:label path="joinDate">Date Of joining</form:label>
+			<form:input path="joinDate"  type="date" class="form-control" />
+		</div>
+		
+		<div class="from-group" style="padding: 5px">
+			<button class="btn btn-primary btn-sm">Save Employee</button>
+		</div>
+		
+		</form:form>
+	</div>
+	
+</div>
+
+<jsp:include page="/footer"/>

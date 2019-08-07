@@ -1,0 +1,17 @@
+package com.cts.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.cts.scd.service.GreetNoteTimeBaseImp;
+import com.cts.scd.service.GreetingServiceArguementImp;
+
+@Configuration
+public class MyConfig {
+	
+	@Bean
+	public GreetNoteTimeBaseImp gs1()
+	{
+		return (new GreetNoteTimeBaseImp());
+	}
+}

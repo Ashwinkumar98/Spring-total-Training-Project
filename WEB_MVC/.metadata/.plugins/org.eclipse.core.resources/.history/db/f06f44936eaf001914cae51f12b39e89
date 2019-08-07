@@ -1,0 +1,10 @@
+<%@ page import ="java.time.LocalDate" %>
+
+
+ 	<h3 style="text-align: right">
+ 		Greet
+ 	</h3>
+ 	
+ 	<form>
+ 	 <label>Name: <input type="text" name="uname"/></label>
+ 	</form>

@@ -1,0 +1,20 @@
+<jsp:include page="/header"></jsp:include>
+	<div class="container p-4">
+		<tabel class="tabel">
+			<tr>
+				<td><strong>First Name</strong></td>
+				<td>${data.firstname}</td>
+				<td><strong>Last Name</strong></td>
+				<td>${data.lastname}</td>
+				<td><strong>Email Id</strong></td>
+				<td>${data.emailid}</td>
+				<td><strong>Mobile No</strong></td>
+				<td>${data.mobileno}</td>
+				<td><strong>Date of Birth</strong></td>
+				<td>${data.DOD}</td>
+				<td><strong>Aadhar no</strong></td>
+				<td><strong>${aadharno}</strong></td>
+			</tr>
+		</tabel>
+	</div>
+<jsp:include page="/footer"></jsp:include>

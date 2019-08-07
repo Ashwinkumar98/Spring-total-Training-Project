@@ -1,0 +1,9 @@
+ <jsp:include page="/header"/>
+ 
+ <div class="jumbotron">
+  	<h1>
+  		${apptitle} <small>...a simple CRUD example...</small>
+  	</h1>
+ </div>
+ 
+ <jsp:include page="/footer"/>

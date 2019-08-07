@@ -1,0 +1,7 @@
+<h1>Employee Details</h1>
+<jsp:include page="/header"/>
+
+	<div class="container p-4">
+	</div>
+	
+<jsp:include page="/footer"/>

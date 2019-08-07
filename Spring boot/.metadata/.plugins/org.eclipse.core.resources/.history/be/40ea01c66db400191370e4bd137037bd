@@ -1,0 +1,54 @@
+<jsp:include page="/header"></jsp:include>
+	<div class="container p-4">
+	<h3>Customer Details</h3>
+		<table class="table">
+			<tr>
+				<td><strong>First Name</strong></td>
+				<td>${data.firstname}</td>
+			</tr>
+				<td><strong>Last Name</strong></td>
+				<td>${data.lastname}</td>
+			<tr>
+				<td><strong>Email Id</strong></td>
+				<td>${data.emailid}</td>
+			</tr>
+			<tr>
+				<td><strong>Mobile No</strong></td>
+				<td>${data.mobileno}</td>
+			</tr>
+			<tr>
+				<td><strong>Date of Birth</strong></td>
+				<td>${data.DOB}</td>
+			</tr>
+			<tr>
+				<td><strong>Aadhar no</strong></td>
+				<td>${data.aadharno}</td>
+			</tr>
+		</table>
+		<h3>Package Details</h3>
+		<table class="table">
+			<tr>
+				<td><strong>Offer Name</strong></td>
+				<td>${data.offerdetails.offer_name}</td>
+			</tr>
+				<td><strong>Last Name</strong></td>
+				<td>${data.lastname}</td>
+			<tr>
+				<td><strong>Email Id</strong></td>
+				<td>${data.emailid}</td>
+			</tr>
+			<tr>
+				<td><strong>Mobile No</strong></td>
+				<td>${data.mobileno}</td>
+			</tr>
+			<tr>
+				<td><strong>Date of Birth</strong></td>
+				<td>${data.DOB}</td>
+			</tr>
+			<tr>
+				<td><strong>Aadhar no</strong></td>
+				<td>${data.aadharno}</td>
+			</tr>
+		</table>
+	</div>
+<jsp:include page="/footer"></jsp:include>

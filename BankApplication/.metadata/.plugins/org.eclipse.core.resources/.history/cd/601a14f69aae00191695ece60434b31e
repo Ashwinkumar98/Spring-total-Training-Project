@@ -1,0 +1,13 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+
+public class PersonalLoan extends Loan{
+	
+	@Column(name="Annula_income")
+	private double annual_income;
+	
+	@Column(name="Amount_To_Paid")
+	private double Loan_paid;
+
+}

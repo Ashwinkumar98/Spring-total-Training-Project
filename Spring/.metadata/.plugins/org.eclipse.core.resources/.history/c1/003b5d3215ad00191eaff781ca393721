@@ -1,0 +1,13 @@
+package com.cts.currency.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CurrencyConverterImp implements CurrencyConverter {
+
+	public double ConverteCurrency(double currency, String name) {
+		
+		return 0;
+	}
+
+}

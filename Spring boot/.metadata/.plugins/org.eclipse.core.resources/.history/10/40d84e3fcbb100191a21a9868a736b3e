@@ -1,0 +1,74 @@
+package com.example.demo.model;
+
+public class Customer {
+	
+	
+	private static int id;
+	private String Fname;
+	private String Lname;
+	private String mob;
+	private String Aadhar_no;
+	private String email_id;
+	private String ex_mob;
+	
+	public Customer(int id, String fname, String lname, String mob, String aadhar_no, String email_id, String ex_mob) {
+		super();
+		this.id = id;
+		Fname = fname;
+		Lname = lname;
+		this.mob = mob;
+		Aadhar_no = aadhar_no;
+		this.email_id = email_id;
+		this.ex_mob = ex_mob;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id++;
+	}
+	public String getFname() {
+		return Fname;
+	}
+	public void setFname(String fname) {
+		Fname = fname;
+	}
+	public String getLname() {
+		return Lname;
+	}
+	public void setLname(String lname) {
+		Lname = lname;
+	}
+	public String getMob() {
+		return mob;
+	}
+	public void setMob(String mob) {
+		this.mob = mob;
+	}
+	public String getAadhar_no() {
+		return Aadhar_no;
+	}
+	public void setAadhar_no(String aadhar_no) {
+		Aadhar_no = aadhar_no;
+	}
+	public String getEmail_id() {
+		return email_id;
+	}
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
+	}
+	public String getEx_mob() {
+		return ex_mob;
+	}
+	public void setEx_mob(String ex_mob) {
+		this.ex_mob = ex_mob;
+	}
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", Fname=" + Fname + ", Lname=" + Lname + ", mob=" + mob + ", Aadhar_no="
+				+ Aadhar_no + ", email_id=" + email_id + ", ex_mob=" + ex_mob + "]";
+	}
+	
+
+}

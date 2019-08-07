@@ -1,0 +1,31 @@
+package com.cts.crud.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+
+@Controller
+
+public class TelecomController {
+	
+	@GetMapping({"","/","/home"})
+	public ModelAndView CustomerForm()
+	{
+		return new ModelAndView("customerForm");
+	}
+	
+	@GetMapping("/header")
+	public ModelAndView headerPage()
+	{
+		return new ModelAndView("header");
+	}
+	
+	@GetMapping("/footer")
+	public ModelAndView footerPage()
+	{
+		return new ModelAndView("footer");
+	}
+	
+
+}

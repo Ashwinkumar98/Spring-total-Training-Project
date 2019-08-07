@@ -1,0 +1,38 @@
+package com.cts.crud.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.crud.Model.Customer;
+import com.cts.crud.Service.CustomerService;
+import com.cts.crud.Service.PostpaidService;
+import com.cts.crud.Service.PrepaidService;
+
+
+@RestController
+public class TelecomController {
+	
+	
+	@Autowired
+	private PrepaidService preservice;
+	
+	@Autowired
+	private PostpaidService postservice;
+	
+	@Autowired
+	private CustomerService cuservice;
+	
+	
+	@GetMapping("/get/{id}")
+	public ResponseEntity<Customer> getCustomer(@PathVariable(name="id") Long id)
+	{
+		return new ResponseEntity<Customer>(cuservice.findById(id),HttpStatus.OK);
+	}
+	
+	
+}

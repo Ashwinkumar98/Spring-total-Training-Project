@@ -1,0 +1,17 @@
+package com.cts.crud.config;
+
+import java.io.Serializable;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JwtTokenUtil implements Serializable {
+	private static final long serialVersionUID = 1L;
+	public static final long Jwt_token_valid = 60;
+	
+	@Value("${jwt.secret}")
+	private String secret;
+	
+	
+}

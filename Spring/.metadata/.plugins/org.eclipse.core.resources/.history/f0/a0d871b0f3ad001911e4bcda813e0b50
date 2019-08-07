@@ -1,0 +1,25 @@
+package com.cts.jpa.hib.demo.model.ManyToMany;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="movies")
+public class Movies {
+	
+	@Id
+	private int mid;
+	
+	@Column(name="movie name")
+	private String name;
+	
+	@ManyToMany
+	private Set<Artist> artist;
+	
+
+}

@@ -1,0 +1,7 @@
+package com.cts.SpringWebMVC.greetService;
+
+public class GreetService {
+	
+	public String getGreeting();
+
+}

@@ -1,0 +1,57 @@
+package com.cts.crud.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Offers")
+public class OfferPackage {
+	
+	private Long offer_id;
+	private String offer_name;
+	private String offer_days;
+	private double price;
+	
+	public OfferPackage() {}
+
+	public Long getOffer_id() {
+		return offer_id;
+	}
+
+	public void setOffer_id(Long offer_id) {
+		this.offer_id = offer_id;
+	}
+
+	public String getOffer_name() {
+		return offer_name;
+	}
+
+	public void setOffer_name(String offer_name) {
+		this.offer_name = offer_name;
+	}
+
+	public String getOffer_days() {
+		return offer_days;
+	}
+
+	public void setOffer_days(String offer_days) {
+		this.offer_days = offer_days;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "OfferPackage [offer_id=" + offer_id + ", offer_name=" + offer_name + ", offer_days=" + offer_days
+				+ ", price=" + price + "]";
+	}
+
+	
+	
+}

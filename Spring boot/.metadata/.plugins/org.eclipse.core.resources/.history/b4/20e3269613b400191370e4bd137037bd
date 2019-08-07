@@ -1,0 +1,11 @@
+package com.cts.crud.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Customer")
+public class Customer {
+	
+	
+}

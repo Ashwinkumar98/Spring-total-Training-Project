@@ -1,0 +1,14 @@
+<h1>Employee Details</h1>
+<jsp:include page="/header"/>
+
+	<div class="container p-4">
+	
+		<table class="table table-bordered">
+			<tr>
+				<td><strong>Employee Id</strong></td>
+				<td>${emp.empId}</td>
+			</tr>
+		</table>
+	</div>
+	
+<jsp:include page="/footer"/>

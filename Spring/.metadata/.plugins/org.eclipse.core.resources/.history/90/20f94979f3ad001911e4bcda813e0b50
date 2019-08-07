@@ -1,0 +1,38 @@
+package com.cts.jpa.hib.demo.model.ManyToMany;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import net.bytebuddy.agent.builder.AgentBuilder.RawMatcher.Inversion;
+
+public class Artist implements Comparable<Artist>{
+	
+	@Id
+	private int id;
+	
+	
+	@Column(name ="ArtistName")
+	private String name;
+	
+	@ManyToMany(cascade = {CascadeType.ALL})
+	@JoinTable(name ="MovieArtist",
+	joinColumns = { @JoinColumn(name ="mid")},
+	inverseJoinColumns  = { @JoinColumn(name="id")} 
+	)
+	private Set<Movies> movies;
+
+	public int compareTo(Artist o) {
+		// TODO Auto-generated method stub
+		return this.id-o.id;
+	}
+
+	
+	
+
+}

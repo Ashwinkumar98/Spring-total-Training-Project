@@ -1,0 +1,11 @@
+ <jsp:include page="/header"/>
+ 	<h3 style="text-align: right">
+ 		Greet
+ 	</h3>
+ 	<h1>${greeting}</h1>
+ 	<form>
+ 	 <label>Name: <input type="text" name="uname"/></label>
+ 	 <button>Greet Me</button>
+ 	</form>
+ 	
+ 	<jsp:include page="/footer"/>

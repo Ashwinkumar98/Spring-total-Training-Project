@@ -1,0 +1,17 @@
+package com.cts.ashwin;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.cts.scd.service.GreetService;
+
+public class App 
+{
+    public static void main( String[] args )
+    {    
+    	ApplicationContext ctx = new ClassPathXmlApplicationContext("bean1.xml");
+    	
+    	GreetService gs1 = (GreetService) ctx.getBean("gs1");
+    	System.out.println(gs1.greet("Ashwin"));
+    }
+}

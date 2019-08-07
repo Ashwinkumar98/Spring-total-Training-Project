@@ -1,0 +1,23 @@
+package com.cts.crud.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cts.crud.DAO.OfferDao;
+import com.cts.crud.model.OfferPackage;
+
+@Service
+public class OfferServiceImp implements OfferService {
+	
+	@Autowired
+	private OfferDao dao;
+	
+	@Override
+	public List<OfferPackage> findAll() {
+		// TODO Auto-generated method stub
+		return dao.findAll();
+	}
+
+}

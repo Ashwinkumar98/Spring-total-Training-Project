@@ -1,0 +1,32 @@
+package com.cts.crud.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+import com.cts.crud.DAO.PostPaid;
+import com.cts.crud.DAO.PrePaidDao;
+import com.cts.crud.model.Postpaid;
+
+public class PostpaidServiceImp implements PostpaidService
+{
+	@Autowired
+	private PostpaidService dao;
+	
+	@Override
+	public Postpaid save(Postpaid data) {
+		return dao.save(data);
+	}
+
+	@Override
+	public List<Postpaid> findAll() {
+		
+		return dao.findAll();
+	}
+	
+}

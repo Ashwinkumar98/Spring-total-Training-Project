@@ -1,0 +1,25 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+ 
+ <jsp:include page="/header"/>
+ 
+ 	<h2>Employee From</h2>
+ 	
+ 	<form:form method="POST" modelAttribute="emp">
+ 	<div>	
+ 		<form:label path="empId">Employee Id : </form:label>
+ 		<form:input path="empId" type="number"/>
+ 	</div>
+ 	
+ 	<div>	
+ 		<form:label path="empName">Employee Name : </form:label>
+ 		<form:input path="empName" type="text"/>
+ 	</div>
+ 	
+ 	<div>	
+ 		<form:label path="empBasics">Employee Id : </form:label>
+ 		<form:input path="empBasics" type="double"/>
+ 	</div>
+ 	
+ 	</form:form>
+ 	
+ <jsp:include page="/footer"/>

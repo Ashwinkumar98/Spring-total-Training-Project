@@ -1,0 +1,5 @@
+package com.bank.bankApplication.model;
+
+public class VechileLoan {
+
+}

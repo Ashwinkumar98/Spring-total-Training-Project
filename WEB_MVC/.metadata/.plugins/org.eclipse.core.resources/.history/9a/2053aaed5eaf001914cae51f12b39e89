@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Home Page</title>
+		<base href="/">
+	</head>
+	<body>
+		<jsp:include page="header" ></jsp:include>
+		
+		<section style="padding: 10px;min-height: 400px;">
+		<h2>Welcome</h2>
+		</section>
+		
+		<jsp:include page="footer" />
+	</body>
+</html>

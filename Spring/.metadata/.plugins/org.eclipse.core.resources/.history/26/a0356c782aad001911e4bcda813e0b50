@@ -1,0 +1,13 @@
+package com.cts.currency.service;
+
+@Service("b1")
+public class CurrencyConverterImp implements CurrencyConverter {
+	
+
+	public int ConverteCurrency(double curr, String name) {
+		return 0;
+	}
+	
+	
+
+}

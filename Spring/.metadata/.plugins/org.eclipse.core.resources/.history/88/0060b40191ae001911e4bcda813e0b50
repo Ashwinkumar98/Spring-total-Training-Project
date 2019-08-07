@@ -1,0 +1,24 @@
+package com.cts.jpa.hib.demo.UI;
+
+import javax.persistence.EntityManager;
+
+import com.cts.jpa.hib.demo.util.JPAUtil;
+
+public class BankApplication {
+
+	public static void main(String[] args) {
+		
+		
+		
+		EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.getTransaction().commit();
+		
+		System.out.println("Customer Saved !!");
+		
+		JPAUtil.shutdown();
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.cts.currency.service;
+
+public class CurrencyConverterImp implements CurrencyConverter {
+
+	public double ConverteCurrency(double currency, String name) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.cts.currency.service;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service("b1")
+public class CurrencyConverterImp implements CurrencyConverter {
+	
+	@Value("#{${map.values}}")
+	private HashMap<String,Double> listofcurrency;
+	
+	public double ConverteCurrency(double curr, String name) {
+		
+		double val = (double) listofcurrency.get(name);
+		System.out.println(val);
+		return 0;
+	}
+	
+	
+
+}

@@ -1,0 +1,64 @@
+<%@ taglib uri = "http://java.sun.com/jstl/core_rt" prefix="c"%>
+<jsp:include page="/header"/>
+<script >
+
+		function choose()
+		{
+			if(event.target.value === 'pre')
+			{
+				var x = document.getElementById("prepaid");
+				 document.getElementById("title").innerHTML="Pre-Paid Offers";
+				  if (x.style.visibility === "hidden") {
+				    x.style.visibility = "visible";
+				  } else {
+				    x.style.visibility = "hidden";
+				  } 
+			}
+			else
+		    {
+				 var x = document.getElementById("postpaid");
+				  if (x.style.visibility === "hidden") {
+				    x.style.visibility = "visible";
+				  } else {
+				    x.style.visibility = "hidden";
+				  } 
+			}
+		}
+
+</script>
+<div>
+	<h3>Choose Your plan</h3>
+	
+	<div>
+	 <label id="pre">Pre-Paid</label>
+	 <input type="radio" name="plan" value="pre" onclick="choose()" id="pre"/>
+	</div>
+	
+	<div>
+	 <label id="post">Post-Paid</label>
+	 <input type="radio"  name="plan" value="post" onclick="choose()" id="post"/>
+	</div>
+	
+	<div id="prepaid" style="visibility: hidden">
+		<h3 id=title>Pre-Paid Offers</h3>
+		<ul>
+			<c:forEach var="val" items="${prepaid}">
+				<li>${ val }</li>
+			</c:forEach>
+		</ul>
+	</div>
+	
+	<div id="postpaid" style="visibility: hidden">
+		<h3>Post-Paid Offers</h3>
+		<ul>
+			<c:forEach var="val" items="${postpaid}">
+				<li>${ val }</li>
+			</c:forEach>
+		</ul>
+	</div>
+	
+	
+	
+</div>
+
+<jsp:include page="/footer"/>

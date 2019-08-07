@@ -1,0 +1,5 @@
+package com.cts.currency.service;
+
+public interface CurrencyConverter {
+
+}

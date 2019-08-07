@@ -1,0 +1,16 @@
+package com.cts.SpringWebMVC.EmployeeService;
+
+import org.springframework.stereotype.Service;
+
+import com.cts.SpringWebMVC.model.Employee;
+
+@Service
+public class EmployeeSericveImp implements EmployeeService {
+
+	@Override
+	public String ComputeAllowance(Employee e) {
+		
+		return e.toString();
+	}
+
+}

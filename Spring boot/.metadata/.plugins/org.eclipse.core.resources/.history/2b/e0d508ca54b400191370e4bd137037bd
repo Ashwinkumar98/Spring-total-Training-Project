@@ -1,0 +1,11 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+<jsp:include page="/header"></jsp:include>
+
+<div class="container p-4">
+	<form:form method="POST" action="/getOffers" modelAttribute="OfferData">
+	</form:form>
+</div>
+
+<jsp:include page="/footer"></jsp:include>

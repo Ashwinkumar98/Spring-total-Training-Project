@@ -1,0 +1,28 @@
+package com.cts.BankProject.UI;
+
+import javax.persistence.EntityManager;
+
+import com.cts.BankProject.Util.JPAUtil;
+import com.cts.BankProject.model.Bank;
+
+
+public class BankApplication {
+
+	public static void main(String[] args) {
+		
+		Bank bank =new Bank();
+		
+		
+		
+		EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.getTransaction().commit();
+		
+		System.out.println("Data Saved !!");
+		
+		JPAUtil.shutdown();
+
+	}
+
+}

@@ -1,0 +1,52 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+ <jsp:include page="/header"/>
+ 	
+ 	<div>
+ 		<h3>Customer Information</h3>
+ 		
+ 		<form:form method="POST" modelAttribute="cus">
+ 		<table>
+ 			<tr>
+ 				<td><form:label path="id">Customer Id:</form:label></td>
+ 				<td><form:input path="id" type = "number" disabled="true"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="Fname">First Name:</form:label></td>
+ 				<td><form:input path="Fname" type = "text"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="Lname">last Name:</form:label></td>
+ 				<td><form:input path="Lname" type = "text"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="mob">Mobile Number:</form:label></td>
+ 				<td><form:input path="mob" type = "text"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="Aadhar_no">Aadhar Number:</form:label></td>
+ 				<td><form:input path="Aadhar_no" type = "text"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="Aadhar_no">Aadhar Number:</form:label></td>
+ 				<td><form:input path="Aadhar_no" type = "text"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><form:label path="email_id">Email Id:</form:label></td>
+ 				<td><form:input path="email_id" type = "email"/></td>
+ 			</tr>
+ 			
+ 			<tr>
+ 				<td><button>Submit</button></td>
+ 			</tr>
+ 			
+ 		</table>	
+ 		
+ 		</form:form>
+ 	</div>

@@ -1,0 +1,22 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class VechileLoan extends Loan{
+	
+	
+	@Column(name="Vehicle_Name")
+	private String name;
+	
+	@Column(name="Vehicle_Amount")
+	private double amount;
+	
+	@Column(name="vendor_name")
+	private String vendor_name;
+	
+	
+	
+
+}

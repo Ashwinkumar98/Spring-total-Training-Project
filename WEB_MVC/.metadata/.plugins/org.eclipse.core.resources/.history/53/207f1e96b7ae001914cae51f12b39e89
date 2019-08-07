@@ -1,0 +1,5 @@
+package com.cts.SpringWebMVC.Controller;
+
+public class DefaultController {
+
+}

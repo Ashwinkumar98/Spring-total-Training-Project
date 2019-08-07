@@ -1,0 +1,17 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+ <jsp:include page="/header"/>
+ 	
+ 	<div>
+ 		<h3>Customer Information</h3>
+ 		
+ 		<form:form method="POST" modelAttribute="cus">
+ 		
+ 		<div>
+ 			<form:label path="id">
+ 			
+ 			</form:label>
+ 		</div>
+ 		
+ 		</form:form>
+ 	</div>

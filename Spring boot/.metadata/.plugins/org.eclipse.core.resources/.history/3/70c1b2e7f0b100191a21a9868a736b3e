@@ -1,0 +1,59 @@
+ <%@ taglib uri = "http://java.sun.com/jstl/core_rt" prefix="c"%>
+<jsp:include page="/header"/>
+<script >
+
+		function choose()
+		{
+			if(event.target.value === 'pre')
+			{
+				var x = document.getElementById("offers");
+				x.style.visibility = "visible"
+				document.getElementById("title").innerHTML="Pre-Paid-Offers";
+				pageContext.setAttribute("showoffers", true);
+			}
+			else
+		    {
+				 document.getElementById("title").innerHTML="Post-Paid-Offers";
+				 var x = document.getElementById("offers");
+				 x.style.visibility = "visible";
+				 pageContext.setAttribute("showoffers", false);
+			}
+		}
+
+</script>
+<div>
+	<h3>Choose Your plan</h3>
+	
+	<div>
+	 <label id="pre">Pre-Paid</label>
+	 <input type="radio" name="plan" value="pre" onclick="choose()" id="pre">
+	 
+	 
+	 </input>
+	</div>
+	
+	<div>
+	 <label id="post">Post-Paid</label>
+	 <input type="radio"  name="plan" value="post" onclick="choose()" id="post"/>
+	</div>
+	
+	<div id="offers" style="visibility: hidden">
+	<h1 id="title"></h1>
+	<c:when test="${showoffers}">
+		<p>asdasd</p>
+	</c:when>
+	<c:otherwise>
+		<p>asdasd</p>
+	</c:otherwise>
+		
+	</div>
+	
+</div>
+
+<jsp:include page="/footer"/> 
+
+
+
+
+
+

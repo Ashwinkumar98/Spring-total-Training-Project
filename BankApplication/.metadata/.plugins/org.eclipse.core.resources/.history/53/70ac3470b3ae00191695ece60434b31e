@@ -1,0 +1,47 @@
+package com.bank.bankApplication;
+
+import java.util.ArrayList;
+
+import javax.persistence.EntityManager;
+
+import com.bank.bankApplication.Util.JPAUtil;
+import com.bank.bankApplication.model.Address;
+import com.bank.bankApplication.model.BankAccount;
+import com.bank.bankApplication.model.HomeLoan;
+import com.bank.bankApplication.model.Loan;
+import com.bank.bankApplication.model.PersonalLoan;
+import com.bank.bankApplication.model.VechileLoan;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	
+    	
+    	Address a1=new Address(1, "madurai", "Tamilnadu", "12-33-44", "anna nagar", "4545343");
+    	
+    	BankAccount bank=new BankAccount("121454541", "SBI", "Ashwin", "238789279100101", a1, new ArrayList<Loan>());
+    	
+    	
+    	PersonalLoan loan1=new PersonalLoan(1, 12293.93, 12, "11.6", bank, 12378723.2323, 123455);
+    	VechileLoan loan2=new VechileLoan(2, 567876, 24, "6.8", bank, "Honda", 456654, "honda_city");
+    	HomeLoan loan3=new HomeLoan(3, 1231234, 180, "18.6", bank, "Ashwin", a1);
+    	
+    	bank.getBanks().add(loan1);
+    	bank.getBanks().add(loan2);
+    	bank.getBanks().add(loan3);
+    	
+    	EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+		
+		em.getTransaction().begin();
+		em.persist(a1);
+		em.persist(loan1);
+		em.persist(loan2);
+		em.persist(loan3);
+		em.getTransaction().commit();
+		
+		System.out.println("Emp Saved !!");
+		
+		JPAUtil.shutdown();
+    }
+}

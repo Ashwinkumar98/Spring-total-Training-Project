@@ -1,0 +1,11 @@
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+ 
+ <jsp:include page="/header"/>
+ 
+ 	<h2>Employee From</h2>
+ 	
+ 	<<form:form method="POST" modelAttribute="emp">
+ 	
+ 	</form:form>
+ 	
+ <jsp:include page="/footer"/>

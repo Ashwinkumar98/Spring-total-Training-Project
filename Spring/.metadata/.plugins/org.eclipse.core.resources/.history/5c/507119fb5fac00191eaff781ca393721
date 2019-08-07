@@ -1,0 +1,27 @@
+package com.cts.scd.service;
+
+public class GreetingServiceArguementImp implements GreetService {
+	
+	private String greetNote;
+
+	public String greet(String username) {
+		
+		if(greetNote == null)
+		{
+			greetNote="Greeting Note";
+		}
+		
+		return greetNote + username;
+	}
+
+	public String getGreetNote() {
+		return greetNote;
+	}
+
+	public void setGreetNote(String greetNote) {
+		this.greetNote = greetNote;
+	}
+	
+	
+
+}

@@ -1,0 +1,18 @@
+package com.cts.jpa.hib.demo.UI;
+
+import com.cts.jpa.hib.demo.model.oneToone.BankAccount;
+import com.cts.jpa.hib.demo.model.oneToone.Customer;
+
+public class Example4 {
+	
+	public static void main(String[] args) {
+		
+		BankAccount acc= new BankAccount();
+		Customer cus = new Customer("87128712739127","Ashwin",acc);
+		acc.setAccno("1927232002343");
+		cus.setBank(acc);
+		
+		
+	}
+
+}

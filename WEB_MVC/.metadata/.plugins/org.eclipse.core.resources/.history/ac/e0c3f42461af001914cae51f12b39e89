@@ -1,0 +1,23 @@
+package com.cts.SpringWebMVC.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DefaultController {
+	
+	@RequestMapping({"" , "/" , "/home"})
+	public String defaultGetRequestHandler() {
+		return "home";
+	}
+	
+	@RequestMapping("/header")
+	public String getHeaderPage() {
+		return "header";
+	}
+	
+	@RequestMapping("/footer")
+	public String getFooterPage() {
+		return "footer";
+	}
+}

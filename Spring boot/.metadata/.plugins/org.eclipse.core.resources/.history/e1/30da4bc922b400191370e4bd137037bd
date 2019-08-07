@@ -1,0 +1,27 @@
+package com.cts.crud.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cts.crud.model.PrepaidOffers;
+
+public class PrepaidServiceImp implements PrepaidService {
+	
+	@Autowired
+	private PrepaidOffers dao;
+
+
+	@Override
+	public List<PrepaidOffers> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PrepaidOffers save(PrepaidService data) {
+		// TODO Auto-generated method stub
+		return dao;
+	}
+
+}

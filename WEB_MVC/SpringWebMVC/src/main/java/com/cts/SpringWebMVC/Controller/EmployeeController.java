@@ -1,0 +1,41 @@
+package com.cts.SpringWebMVC.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cts.SpringWebMVC.EmployeeService.EmployeeService;
+import com.cts.SpringWebMVC.model.Employee;
+
+@Controller
+@RequestMapping("/emp")
+public class EmployeeController {
+	
+	@Autowired
+	private EmployeeService emp;
+	
+	@ModelAttribute
+	public void populateDesign(Model model)
+	{
+		model.addAttribute("desig",new String[] {"PAT","PA","A","SA","Ar","Sr.Ar"});
+	}
+	
+	@GetMapping
+	public ModelAndView showEmpInp()
+	{
+		return new ModelAndView("empInp","emp",new Employee());
+	}
+	
+	@PostMapping
+	public ModelAndView showEmpOut(@ModelAttribute("emp") Employee e)
+	{
+		e=emp.ComputeAllowance(e);
+		return new ModelAndView("empOut","emp",e);
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Loan")
+public class Loan {
+	
+	@Id
+	@Column(name="ID")
+	private int id;
+	
+	@Column(name="Loan amount")
+	private double loanamount;
+}

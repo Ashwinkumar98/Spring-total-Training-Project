@@ -1,0 +1,11 @@
+ <jsp:include page="/header"/>
+ 
+	</div>
+	
+	<c:if test="${msg != '0' }">
+	
+	<p class="alert alert-info p-2"><strong>${msg }</strong></p>
+	
+	</c:if>
+ 
+ <jsp:include page="/footer"/>

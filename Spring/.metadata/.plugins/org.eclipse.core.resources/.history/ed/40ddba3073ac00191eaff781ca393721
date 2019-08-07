@@ -1,0 +1,14 @@
+package com.cts.scd.service;
+import java.util.List;
+
+public class ListServiceImp implements ListService {
+	
+
+	public List getList(List<Integer> arr) {
+		
+		return arr;
+		
+	}
+	
+
+}

@@ -1,0 +1,52 @@
+package com.cts.crud.controller;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class DefaultController {
+	
+	@GetMapping({"","/","/home"})
+	public ModelAndView homepagerequest(@RequestParam(name="msgCode",required=false, defaultValue="0") int msgCode,
+			@RequestParam(name="id",required=false, defaultValue="0") long empId
+			)
+	{
+		ModelAndView mv=new ModelAndView("dashboard");
+		System.out.println("msg"+ msgCode);
+		if(msgCode>0)
+		{
+			mv.addObject("msg","EmployeeId:" +empId + " is " +(msgCode ==EmployeeController.SAVED ? "SAVED" : "DELETED" )+ " Successfully");
+		}
+		return mv;
+	}
+	
+	@RequestMapping("/header")
+	public ModelAndView headersectionRequest()
+	{
+		Map<String, String> navLinks = new LinkedHashMap<>();
+		navLinks.put("home", "Home");
+		navLinks.put("emps", "Employees");
+		navLinks.put("newEmp", "New Employee");
+		navLinks.put("SearchEmp", "Search Employee");
+		
+		ModelAndView mv = new ModelAndView("header");
+		mv.addObject("links", navLinks);
+		mv.addObject("apptitle","Employee Record Manager");
+		
+		return mv;
+	}
+	
+	@RequestMapping("/footer")
+	public ModelAndView footersectionRequest()
+	{
+		return new ModelAndView("footer");
+	}
+	
+	
+}

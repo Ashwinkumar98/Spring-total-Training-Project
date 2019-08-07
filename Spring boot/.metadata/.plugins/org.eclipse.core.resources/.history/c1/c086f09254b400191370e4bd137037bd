@@ -1,0 +1,21 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+<jsp:include page="/header"></jsp:include>
+
+<div class="container p-4">
+	<table class="table table-striped">
+		<tr>
+			<td><h4>Select Offer Type</h4></td>
+			<td>
+				<select  name="offers" class="form-control" onchange="searchfun(event)">
+					<option value="">----SELECT-----</option>
+					<option value="pre">Prepaid Offers</option>
+					<option value="post">Postpaid Offers</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<jsp:include page="/footer"></jsp:include>

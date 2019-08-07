@@ -1,0 +1,7 @@
+<jsp:include page="/header"></jsp:include>
+
+<div class="container p-4">
+	
+</div>
+
+<jsp:include page="/footer"></jsp:include>

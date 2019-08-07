@@ -1,0 +1,51 @@
+package com.bank.bankApplication.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Personal_Loan")
+public class PersonalLoan extends Loan{
+	
+	@Column(name="Annula_income")
+	private double annual_income;
+	
+	@Column(name="Amount_To_Paid")
+	private double Loan_paid;
+	
+	public PersonalLoan() {
+		
+	}
+
+	public PersonalLoan(int id, double loanamount, int duration, String intrest, double annual_income,
+			double loan_paid) {
+		super(id, loanamount, duration, intrest);
+		this.annual_income = annual_income;
+		Loan_paid = loan_paid;
+	}
+
+	public double getAnnual_income() {
+		return annual_income;
+	}
+
+	public void setAnnual_income(double annual_income) {
+		this.annual_income = annual_income;
+	}
+
+	public double getLoan_paid() {
+		return Loan_paid;
+	}
+
+	public void setLoan_paid(double loan_paid) {
+		Loan_paid = loan_paid;
+	}
+
+	@Override
+	public String toString() {
+		return "PersonalLoan [annual_income=" + annual_income + ", Loan_paid=" + Loan_paid + "]";
+	}
+	
+	
+
+}

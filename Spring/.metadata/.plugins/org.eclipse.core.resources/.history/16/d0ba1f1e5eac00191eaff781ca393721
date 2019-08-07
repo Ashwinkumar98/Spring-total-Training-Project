@@ -1,0 +1,10 @@
+package com.cts.scd.service;
+
+public class GreetingServiceArguementImp implements GreetService {
+
+	public String greet(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

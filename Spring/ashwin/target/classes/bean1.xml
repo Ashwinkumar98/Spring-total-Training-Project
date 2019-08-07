@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="gs1" class="com.cts.scd.service.GreetServiceImp"/>
+    
+    <bean id="gs2" class="com.cts.scd.service.GreetingServiceArguementImp" scope="prototype">
+    <property name="greetNote" value="kumar"></property>
+    </bean>
+    
+     <bean id="gs3" class="com.cts.scd.service.GreetingServiceArguementImp" scope="prototype">
+      <constructor-arg index="0" value="Amma"/>
+    </bean>
+    
+    <bean id="gs4" class="com.cts.scd.service.GreetNoteTimeBaseImp"/>
+    
+    <!-- bean injection -->
+    
+    <bean id="gs5" class="com.cts.scd.service.GreetNoteServiceAdvance" scope="prototype">
+      <constructor-arg index="0" ref="gs4"/>
+    </bean>
+    
+    
+    <!-- bean injection using inner bean concept-->
+    
+     <bean id="gs6" class="com.cts.scd.service.GreetNoteServiceAdvance" scope="prototype">
+      <constructor-arg index="0">
+      	<bean class="com.cts.scd.service.GreetNoteTimeBaseImp"/>
+      </constructor-arg>
+      
+    </bean>
+    
+    <bean id="gs7" class="com.cts.scd.service.ListServiceImp">
+    <constructor-arg index="0">
+     <list>
+     		<value>1</value>
+     		<value>3</value>
+     		<value>4</value>
+     </list>
+    </constructor-arg>
+    </bean>
+    
+</beans>

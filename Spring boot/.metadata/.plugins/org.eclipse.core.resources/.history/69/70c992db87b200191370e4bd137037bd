@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<title>${apptitle}</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"> </script>
+		<script type="text/javascript" src="js/popper.min.js"> </script>
+		<script type="text/javascript" src="js/jquery.min.js"> </script>
+	</head>
+</html>

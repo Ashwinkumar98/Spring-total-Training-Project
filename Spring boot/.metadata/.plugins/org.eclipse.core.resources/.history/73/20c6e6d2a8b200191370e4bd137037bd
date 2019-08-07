@@ -1,0 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+
+<jsp:include page="/header"/>
+
+<div class="container-fluid p-4">
+	<h3>Employee Information</h3>
+	
+</div>
+
+<jsp:include page="/footer"/>

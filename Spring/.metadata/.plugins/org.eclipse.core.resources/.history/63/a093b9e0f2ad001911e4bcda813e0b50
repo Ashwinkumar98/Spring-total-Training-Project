@@ -1,0 +1,6 @@
+package com.cts.jpa.hib.demo.model.ManyToMany;
+
+
+public class Artist implements Comparable<Movies>{
+
+}

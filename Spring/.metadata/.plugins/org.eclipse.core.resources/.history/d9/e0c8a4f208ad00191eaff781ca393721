@@ -1,0 +1,19 @@
+package com.cts.ashwin.AnnotationBased;
+
+import java.time.LocalDate;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = {"com.cts.scd.service"})
+public class Config {
+	
+	@Bean
+	public LocalDate today()
+	{
+		return LocalDate.now();
+	}
+
+}

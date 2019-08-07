@@ -1,0 +1,26 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+ <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form" %>
+
+<jsp:include page="/header"></jsp:include>
+
+<div class="container p-4">
+	<form:form method="POST" action="/getOffers" modelAttribute="OfferData">
+		<table class="table table-striped">
+		<tr>
+			<td><h4>Select Offer Type</h4></td>
+			<td>
+				<form:select  name="offers" class="form-control" onchange="searchfun(event)">
+					<form:option value="">----SELECT-----</form:option>
+					<form:option value="pre">Prepaid Offers</form:option>
+					<form:option value="post">Postpaid Offers</form:option>
+				</form:select>
+			</td>
+			<td>
+				<form:button class="btn btn-success btn-sm">Find Offers</form:button>
+			</td>
+		</tr>
+	</table>
+	</form:form>
+</div>
+
+<jsp:include page="/footer"></jsp:include>

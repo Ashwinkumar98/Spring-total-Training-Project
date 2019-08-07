@@ -1,0 +1,13 @@
+package com.cts.SpringWebMVC.EmployeeService;
+
+import com.cts.SpringWebMVC.model.Employee;
+
+public class EmployeeSericveImp implements EmployeeService {
+
+	@Override
+	public Employee ComputeAllowance(Employee e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

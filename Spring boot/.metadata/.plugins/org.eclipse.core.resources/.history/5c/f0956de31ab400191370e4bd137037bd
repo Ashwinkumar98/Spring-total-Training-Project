@@ -1,0 +1,10 @@
+package com.cts.crud.Service;
+
+import java.util.List;
+
+import com.cts.crud.model.OfferPackage;
+
+public interface OfferService{
+	
+	List<OfferPackage> findAll();
+}

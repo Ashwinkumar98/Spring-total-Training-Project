@@ -1,0 +1,9 @@
+package com.cts.scd.service;
+
+public class GreetServiceImp implements GreetService {
+
+	public String greet(String username) {
+		return "Welcome : "+username;
+	}
+
+}

@@ -1,0 +1,55 @@
+
+<jsp:include page="/header"/>
+
+	<div class="container p-4">
+	<h3>Employee Details</h3>
+		<table class="table ">
+			<tr>
+				<td><strong>Employee Id</strong></td>
+				<td>${emp.empId}</td>
+			</tr>
+			
+			<tr>
+				<td><strong> First Name</strong></td>
+				<td>${emp.firstname}</td>
+			</tr>
+			
+			<tr>
+				<td><strong> Last Name</strong></td>
+				<td>${emp.lastname}</td>
+			</tr>
+			
+			<tr>
+				<td><strong>Basic Pay </strong></td>
+				<td>${emp.basic}</td>
+			</tr>
+			
+			<tr>
+				<td><strong>Employee Role </strong></td>
+				<td>${emp.dept}</td>
+			</tr>
+			
+			<tr>
+				<td><strong>Date Of Joining </strong></td>
+				<td>${emp.joinDate}</td>
+			</tr>
+			
+			<tr>
+				<td><strong>Mobile Number </strong></td>
+				<td>${emp.mobileno}</td>
+			</tr>
+			
+			<tr>
+				<td><strong>Email Id </strong></td>
+				<td>${emp.emailid}</td>
+			</tr>
+			
+				<tr>
+				<td><a href="/deleteEmp/${emp.empId}" class="btn btn-danger btn-sm">Delete Employee</a></td>
+				<td><a href="/newEmp/${emp.empId}" class="btn btn-info btn-sm">Edit Employee</a></td>
+			</tr>
+			
+		</table>
+	</div>
+	
+<jsp:include page="/footer"/>

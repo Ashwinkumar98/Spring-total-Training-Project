@@ -1,0 +1,10 @@
+package com.cts.ashwin.AnnotationBased;
+
+import org.springframework.context.annotation.ComponentScan;
+
+
+@
+@ComponentScan(basePackages = {"com.cts.scd.service"})
+public class Configuration {
+
+}

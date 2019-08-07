@@ -1,0 +1,12 @@
+package com.cts.jpa.hib.demo.model.oneToone;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "bank")
+public class BankAccount {
+	
+	
+
+}

@@ -1,0 +1,42 @@
+package com.cts.scd.service;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service("gs2")
+public class GreetingServiceArguementImp implements GreetService {
+	
+	@Value("Dai...")
+	private String greetNote;
+	
+	public GreetingServiceArguementImp() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public GreetingServiceArguementImp(String name) {
+		greetNote = name;
+	}
+	
+	
+
+	public String greet(String username) {
+		
+		if(greetNote == null)
+		{
+			greetNote="Greeting Note";
+		}
+		
+		return greetNote +" "+ username;
+	}
+
+	public String getGreetNote() {
+		return greetNote;
+	}
+
+	public void setGreetNote(String greetNote) {
+		this.greetNote = greetNote;
+	}
+	
+	
+
+}

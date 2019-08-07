@@ -1,0 +1,10 @@
+package com.cts.crud.Service;
+
+import com.cts.crud.model.Customer;
+import com.cts.crud.model.Employee;
+
+public interface CustomerService {
+	
+	Customer save(Customer emp);
+	Customer findById(Long empId);
+}

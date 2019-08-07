@@ -1,0 +1,30 @@
+package com.cts.crud.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import com.cts.crud.Model.Customer;
+import com.cts.crud.Service.CustomerService;
+import com.cts.crud.Service.PostpaidService;
+import com.cts.crud.Service.PrepaidService;
+
+
+public class TelecomController {
+	
+	private Customer cusSession;
+	
+	@Autowired
+	private PrepaidService preservice;
+	
+	@Autowired
+	private PostpaidService postservice;
+	
+	@Autowired
+	private CustomerService cuservice;
+	
+
+	
+	
+	
+}

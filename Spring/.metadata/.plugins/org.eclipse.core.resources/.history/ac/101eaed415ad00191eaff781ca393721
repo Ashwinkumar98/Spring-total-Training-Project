@@ -1,0 +1,7 @@
+package com.cts.currency.service;
+
+public interface CurrencyConverter {
+	
+	public double ConverteCurrency(double currency,String name);
+
+}
